@@ -4,7 +4,7 @@ import android.bluetooth.BluetoothDevice;
 
 import java.util.List;
 
-public class BlueToothHelper implements ResultCallBack {
+public class BluetoothHelper implements ResultCallBack {
     @Override
     public void onOpenBlueToothError(String error) {
 

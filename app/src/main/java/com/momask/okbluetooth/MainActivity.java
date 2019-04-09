@@ -3,17 +3,17 @@ package com.momask.okbluetooth;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.momask.library.BlueToothServiceProxy;
+import com.momask.library.BluetoothServiceProxy;
 
 public class MainActivity extends AppCompatActivity {
 
-    private BlueToothServiceProxy blueToothServiceProxy;
+    private BluetoothServiceProxy blueToothServiceProxy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        blueToothServiceProxy = new BlueToothServiceProxy(this);
+        blueToothServiceProxy = new BluetoothServiceProxy(this);
         blueToothServiceProxy.start();
     }
 

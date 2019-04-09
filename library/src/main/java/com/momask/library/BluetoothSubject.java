@@ -10,14 +10,15 @@ import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.TimerTask;
+import java.util.UUID;
 
 public abstract class BluetoothSubject {
 
-    private final BluetoothAdapter mDefaultAdapter;
+    protected final BluetoothAdapter mDefaultAdapter;
+    protected static final UUID PUBLIC_UUID=UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
     private Context mContext;
     private volatile boolean isOpenBlueTooth;
-    private BlueToothHelper blueToothHelper;
+    private BluetoothHelper blueToothHelper;
     private List<BluetoothDevice> mBondDevices = new ArrayList<>();
     private List<BluetoothDevice> mUnBondDevices = new ArrayList<>();
     private List<BluetoothDevice> mTotalDevices = new ArrayList<>();
@@ -62,13 +63,13 @@ public abstract class BluetoothSubject {
 
     }
 
-    public void setListener(BlueToothHelper blueToothHelper) {
+    public void setListener(BluetoothHelper blueToothHelper) {
         this.blueToothHelper = blueToothHelper;
     }
 
     protected void startSearching() {
         if (blueToothHelper == null) {
-            blueToothHelper = new BlueToothHelper();
+            blueToothHelper = new BluetoothHelper();
         }
 
         try {
