@@ -16,6 +16,7 @@ public abstract class BluetoothSubject {
 
     protected final BluetoothAdapter mDefaultAdapter;
     protected static final UUID PUBLIC_UUID=UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
+    protected static final String SERVICE_NAME="Bluetooth";
     private Context mContext;
     private volatile boolean isOpenBlueTooth;
     private BluetoothHelper blueToothHelper;

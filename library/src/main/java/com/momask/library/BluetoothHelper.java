@@ -36,7 +36,7 @@ public class BluetoothHelper implements ResultCallBack {
     }
 
     @Override
-    public void onTotalDevicesResult(List<BluetoothDevice> unBondDevices) {
+    public void onTotalDevicesResult(List<BluetoothDevice> totalDevices) {
 
     }
 

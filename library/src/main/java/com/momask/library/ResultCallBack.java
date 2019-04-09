@@ -18,5 +18,6 @@ public interface ResultCallBack {
 
     void onUnBondDevicesResult(List<BluetoothDevice> unBondDevices);
 
-    void onTotalDevicesResult(List<BluetoothDevice> unBondDevices);
+    void onTotalDevicesResult(List<BluetoothDevice> totalDevices);
+
 }
