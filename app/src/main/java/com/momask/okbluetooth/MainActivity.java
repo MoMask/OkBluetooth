@@ -7,11 +7,20 @@ import com.momask.library.BlueToothServiceProxy;
 
 public class MainActivity extends AppCompatActivity {
 
+    private BlueToothServiceProxy blueToothServiceProxy;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        BlueToothServiceProxy blueToothServiceProxy = new BlueToothServiceProxy(this);
+        blueToothServiceProxy = new BlueToothServiceProxy(this);
         blueToothServiceProxy.start();
+    }
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        blueToothServiceProxy.unMount();
     }
 }
